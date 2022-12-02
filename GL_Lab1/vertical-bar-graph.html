@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bar-graph-box {
+            display: block;
+            background-color: rgb(210, 133, 133);
+            width: 180px;
+            height: 350px; 
+            margin:0 auto;
+        }
+
+        .bar-graph-box>h1{
+            text-align: center;
+        }
+        .percentage-bar{
+            padding-left: 20px;
+            padding-top: 10px;
+            display:inline-block;
+        }
+
+        .outer-bar{
+            display: inline-block;
+            background-color:maroon;
+            width:30px;
+            height:250px;
+
+        }
+
+        .inner-bar{
+            background-color: rgb(252, 204, 204);
+            height:100%;
+            
+        }
+
+        label{
+            display: inline-block;
+            text-align: center;
+            width:50px;
+            padding-left: 6px;
+            font-weight: bold;
+        }
+
+        #bar-one .inner-bar{
+            animation-name:bar1filler;
+            animation-duration: 3s;
+
+        }
+
+        @keyframes bar1filler {
+            0%{
+                height:100%;
+            }
+            100%{
+                height:70%;
+            }
+        }
+
+        #bar-two .inner-bar{
+            animation-name:bar2filler;
+            animation-duration: 3s;
+        }
+
+        @keyframes bar2filler {
+            0%{
+                height:100%;
+            }
+            100%{
+                height:60%;
+            }
+        }
+
+        
+        #bar-three .inner-bar{
+            animation-name:bar3filler;
+            animation-duration: 3s;
+        }
+
+        @keyframes bar3filler {
+            0%{
+                height:100%;
+            }
+            100%{
+                height:20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bar-graph-box">
+        <div class="percentage-bar">
+            <div class="outer-bar" id="bar-one">
+                <div class="inner-bar">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="percentage-bar">
+            <div class="outer-bar" id="bar-two">
+                <div class="inner-bar">
+
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="percentage-bar">
+            <div class="outer-bar" id="bar-three">
+                <div class="inner-bar">
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="percentage-text-display">
+            <label>30%</label>
+            <label>40%</label>
+            <label>80%</label>
+        </div>
+        
+        <h1>Bar Plot</h1>
+
+    </div>
+    
+</body>
+
+</html>
